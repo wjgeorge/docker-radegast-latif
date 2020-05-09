@@ -1,3 +1,7 @@
-all:
-	docker build . -t radegast
-	docker run -it --rm radegast bash
+all: build run
+
+build:
+	docker build . -t wjgeorge/radegast-latif
+
+run:
+	docker run -it --rm wjgeorge/radegast-latif bash
